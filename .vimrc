@@ -1,9 +1,13 @@
 ﻿" *****************
 " muzuiget 的 vimrc
+" modifid by iceleaf
 " *****************
 
 " 初始化 {{{1
 " ======
+
+"自动加载配置文件
+autocmd! bufwritepost *.vimrc source $HOME/.vimrc
 
 " 关闭 vi 的兼容
 set nocompatible
@@ -15,7 +19,7 @@ set nocompatible
 source $VIMRUNTIME/macros/matchit.vim
 
 " 使用跟 Windows 兼容的快捷键设定
-source $VIMRUNTIME/mswin.vim
+"source $VIMRUNTIME/mswin.vim
 
 " Windows 特别设置
 if has("win32")
@@ -66,7 +70,7 @@ if &binary == 1                    " 二进制编辑模式
     set display+=uhex              " 以十六进制显示不可打印字符
 endif
 
-let mapleader = ","                " 使用逗号作 leader 键
+let mapleader = ";"                " 使用逗号作 leader 键
 let maplocalleader = "\\"          " 使用反斜杠作 localleader 键
 
 " 命令行补全 {{{2

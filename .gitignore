@@ -1,3 +1,4 @@
 bundle
 scripts/download.sh
 .netrwhist
+*.pyc
