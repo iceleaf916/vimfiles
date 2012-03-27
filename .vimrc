@@ -73,6 +73,10 @@ endif
 let mapleader = ";"                " 使用逗号作 leader 键
 let maplocalleader = "\\"          " 使用反斜杠作 localleader 键
 
+" 恢复上次文件打开位置
+set viminfo='10,\"100,:20,%,n~/.viminfo
+au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
+
 " 命令行补全 {{{2
 " ----------
 
@@ -368,6 +372,11 @@ autocmd BufNewFile,BufRead *.cue setfiletype cue
 
 " 插件设置 {{{1
 " ========
+
+" Minibufexpl
+let g:miniBufExplMapCTabSwitchBufs = 1
+nn <c-j> :bn<cr>
+nn <c-k> :bp<cr>
 
 " NerdTree {{{2
 " --------

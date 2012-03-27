@@ -52,10 +52,10 @@ voom:
     home: http://www.vim.org/scripts/script.php?script_id=2657
     repo: https://github.com/vim-scripts/VOoM.git
 
-pyflakes:
-    desc: python 语法检查
-    home: http://www.vim.org/scripts/script.php?script_id=2441
-    repo: https://github.com/kevinw/pyflakes-vim.git
+#pyflakes:
+#    desc: python 语法检查
+#    home: http://www.vim.org/scripts/script.php?script_id=2441
+#    repo: https://github.com/kevinw/pyflakes-vim.git
 
 dosini:
     desc: ini 语法高亮
@@ -83,12 +83,17 @@ matchtag:
     home: http://www.vim.org/scripts/script.php?script_id=3818
     repo: https://github.com/gregsexton/MatchTag.git
 
-rails:
-    desc: Rails 开发
-    home: http://www.vim.org/scripts/script.php?script_id=1567
-    repo: https://github.com/tpope/vim-rails.git
+#rails:
+#    desc: Rails 开发
+#    home: http://www.vim.org/scripts/script.php?script_id=1567
+#    repo: https://github.com/tpope/vim-rails.git
 
 tabular:
     desc: 文本对齐格式化
     home: http://www.vim.org/scripts/script.php?script_id=3464
     repo: https://github.com/godlygeek/tabular.git
+
+minibufexpl:
+    desc: minibufexpl
+    home: http://www.vim.org/scripts/script.php?script_id=159
+    repo: https://github.com/fholgado/minibufexpl.vim.git
