@@ -97,3 +97,15 @@ minibufexpl:
     desc: minibufexpl
     home: http://www.vim.org/scripts/script.php?script_id=159
     repo: https://github.com/fholgado/minibufexpl.vim.git
+
+autocomplpop:
+    desc: 自动填充
+    home: http://www.vim.org/scripts/script.php?script_id=1879
+    repo: https://bitbucket.org/ns9tks/vim-autocomplpop
+    type: hg
+
+L9:
+    desc: L9
+    home: http://www.vim.org/scripts/script.php?script_id=3252
+    repo: https://bitbucket.org/ns9tks/vim-l9
+    type: hg
