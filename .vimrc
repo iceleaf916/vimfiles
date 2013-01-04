@@ -135,6 +135,7 @@ if has("gui_running")              " 使用GUI时
 else                               " 使用CLI时
     if &term == "xterm"            " 虚拟终端
         set t_Co=256               " 终端颜色数
+        set cursorline             " 高亮当前行
     elseif &term == "linux"        " 控制台
         colorscheme torte          " 设置色彩方案
     endif
@@ -160,18 +161,20 @@ nnoremap <leader>gm :set guioptions+=m <cr>
 nnoremap <leader>gM :set guioptions-=m <cr>
 nnoremap <leader>gs :set guioptions+=mT <cr>
 nnoremap <leader>gh :set guioptions-=mT <cr>
+nnoremap <leader>ss :w<cr>
 
 " 标签 {{{2
 " ----
 
-nnoremap <leader>tn :tabnew<cr>
-nnoremap <leader>te :tabedit
 nnoremap <leader>tw :tabclose<cr>
+nnoremap <leader>ty :tabnext<cr>
+nnoremap <leader>tr :tabprevious<cr>
 
 " 高亮 {{{2
 " ----
 
 " 高亮第 81 列
+set colorcolumn=81
 nnoremap <leader>m :set colorcolumn=81<cr>
 "
 " 关闭高亮列
@@ -374,15 +377,16 @@ autocmd BufNewFile,BufRead *.cue setfiletype cue
 " ========
 
 " Minibufexpl
-let g:miniBufExplMapCTabSwitchBufs = 1
-nn <c-j> :bn<cr>
-nn <c-k> :bp<cr>
+"let g:miniBufExplMapCTabSwitchBufs = 1
+"nn <c-j> :bn<cr>
+"nn <c-k> :bp<cr>
 
 " NerdTree {{{2
 " --------
 
 let NERDTreeIgnore=['\.pyc$']
 let NERDTreeDirArrows=0
+let NERDTreeWinPos="left"
 noremap <f2> :NERDTreeToggle<cr>
 
 " PyRef {{{2
@@ -395,6 +399,11 @@ let g:pyref_mapping = '<leader>k'
 
 nnoremap <leader>O :Voom<cr>
 nnoremap <leader>o :Voom 
+
+" Tagbar设置
+nnoremap <silent> <F12> :TagbarToggle<CR>
+let g:tagbar_width = 30
+let g:tagbar_autofocus = 1
 
 " 未整理 {{{1
 " ======
