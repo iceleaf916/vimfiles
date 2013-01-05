@@ -123,6 +123,8 @@ catch
     colorscheme desert
 endtry
 
+set cursorline             " 高亮当前行
+
 " 不同界面特别设置
 if has("gui_running")              " 使用GUI时
     set guioptions-=T              " 关闭工具栏
@@ -403,7 +405,9 @@ nnoremap <leader>o :Voom
 " Tagbar设置
 nnoremap <silent> <F12> :TagbarToggle<CR>
 let g:tagbar_width = 30
-let g:tagbar_autofocus = 1
+
+" css color 设置
+"let g:cssColorVimDoNotMessMyUpdatetime = 1
 
 " 未整理 {{{1
 " ======
