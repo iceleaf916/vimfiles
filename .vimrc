@@ -123,7 +123,8 @@ catch
     colorscheme desert
 endtry
 
-set cursorline             " 高亮当前行
+hi CursorLine cterm=NONE ctermbg=darkgray ctermfg=white guibg=darkred guifg=white
+set cursorline
 
 " 不同界面特别设置
 if has("gui_running")              " 使用GUI时
@@ -167,6 +168,8 @@ nnoremap <leader>ss :w<cr>
 
 " 标签 {{{2
 " ----
+map <c-]> :tabnext<cr>
+map <c-[> :tabprevious<cr>
 
 nnoremap <leader>tw :tabclose<cr>
 nnoremap <leader>ty :tabnext<cr>
