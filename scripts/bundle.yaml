@@ -98,11 +98,11 @@ tabular:
 #    home: http://www.vim.org/scripts/script.php?script_id=159
 #    repo: https://github.com/fholgado/minibufexpl.vim.git
 
-autocomplpop:
-    desc: 自动填充
-    home: http://www.vim.org/scripts/script.php?script_id=1879
-    repo: https://bitbucket.org/ns9tks/vim-autocomplpop
-    type: hg
+#autocomplpop:
+#    desc: 自动填充
+#    home: http://www.vim.org/scripts/script.php?script_id=1879
+#    repo: https://bitbucket.org/ns9tks/vim-autocomplpop
+#    type: hg
 
 L9:
     desc: L9
@@ -116,8 +116,8 @@ TagBar:
     repo: https://github.com/majutsushi/tagbar.git
     type: git
 
-#CssColor:
-#    desc: CssColor
-#    home: https://github.com/skammer/vim-css-color.git
-#    repo: https://github.com/skammer/vim-css-color.git
-#    type: git
+CssColor:
+    desc: CssColor
+    home: https://github.com/skammer/vim-css-color.git
+    repo: https://github.com/skammer/vim-css-color.git
+    type: git
