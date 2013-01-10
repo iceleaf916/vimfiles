@@ -123,9 +123,6 @@ catch
     colorscheme desert
 endtry
 
-hi CursorLine cterm=NONE ctermbg=darkgray ctermfg=white guibg=darkred guifg=white
-set cursorline
-
 " 不同界面特别设置
 if has("gui_running")              " 使用GUI时
     set guioptions-=T              " 关闭工具栏
@@ -138,7 +135,6 @@ if has("gui_running")              " 使用GUI时
 else                               " 使用CLI时
     if &term == "xterm"            " 虚拟终端
         set t_Co=256               " 终端颜色数
-        set cursorline             " 高亮当前行
     elseif &term == "linux"        " 控制台
         colorscheme torte          " 设置色彩方案
     endif
@@ -151,6 +147,11 @@ elseif g:colors_name == "desert"
     highlight Normal guibg=Black
     highlight NonText guibg=Black
 endif
+
+"color murphy " 颜色主题
+"color torte
+set cursorline
+highlight CursorLine cterm=NONE ctermbg=darkgray ctermfg=white
 
 " 键位映射 {{{1
 " ========
@@ -168,18 +169,25 @@ nnoremap <leader>ss :w<cr>
 
 " 标签 {{{2
 " ----
-map <c-]> :tabnext<cr>
-map <c-[> :tabprevious<cr>
+map <c-p> :tabnext<cr>
+map <c-i> :tabprevious<cr>
 
+nnoremap <leader>tn :tabnew<cr>
 nnoremap <leader>tw :tabclose<cr>
 nnoremap <leader>ty :tabnext<cr>
 nnoremap <leader>tr :tabprevious<cr>
+
+" 窗口操作 {{{2
+" ----
+map <s-F12> :split<CR>  		"横向分割窗口
+map <c-F12> :vsplit<CR>		"坚向侵害窗口
+map <s-F10> :close<CR>   "关闭当前窗口
+map <c-F10> :only<CR>    "只留当前窗口
 
 " 高亮 {{{2
 " ----
 
 " 高亮第 81 列
-set colorcolumn=81
 nnoremap <leader>m :set colorcolumn=81<cr>
 "
 " 关闭高亮列
@@ -275,8 +283,8 @@ inoremap <a-S> <esc>di"i
 " ----------
 
 " 全文
-nnoremap <a-s> :%s/
-inoremap <a-s> <esc>:%s/
+nnoremap <c-s> :%s/
+inoremap <c-s> <esc>:%s/
 nnoremap <leader>s :%s/
 
 " 选择
@@ -294,11 +302,11 @@ nnoremap <leader>tev :tabedit $MYVIMRC<cr>
 " ------
 
 " 移动
-cnoremap <c-a> <home>
-cnoremap <c-e> <end>
+nnoremap <c-h> <home>
+nnoremap <c-l> <end>
 
 " 插入特殊字符
-cnoremap <c-q> <c-v>
+"cnoremap <c-q> <c-v>
 
 " 其它 {{{2
 " ----
@@ -321,6 +329,9 @@ nnoremap <leader>df :windo diffoff<cr>
 
 " 写入
 nnoremap <leader>w :w<cr>
+
+" 退出
+nnoremap <leader>q :q<cr>
 
 " sudo 写入
 nnoremap <leader>W :w !sudo tee % >/dev/null

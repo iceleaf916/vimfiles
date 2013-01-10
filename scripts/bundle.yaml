@@ -116,8 +116,8 @@ TagBar:
     repo: https://github.com/majutsushi/tagbar.git
     type: git
 
-CssColor:
-    desc: CssColor
-    home: https://github.com/skammer/vim-css-color.git
-    repo: https://github.com/skammer/vim-css-color.git
-    type: git
+#CssColor:
+#    desc: CssColor
+#    home: https://github.com/skammer/vim-css-color.git
+#    repo: https://github.com/skammer/vim-css-color.git
+#    type: git
