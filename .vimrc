@@ -302,8 +302,8 @@ nnoremap <leader>tev :tabedit $MYVIMRC<cr>
 " ------
 
 " 移动
-nnoremap <c-h> <home>
-nnoremap <c-l> <end>
+"nnoremap <c-h> <home>
+"nnoremap <c-l> <end>
 
 " 插入特殊字符
 "cnoremap <c-q> <c-v>
