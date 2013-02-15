@@ -403,6 +403,7 @@ autocmd BufNewFile,BufRead *.cue setfiletype cue
 let NERDTreeIgnore=['\.pyc$']
 let NERDTreeDirArrows=0
 let NERDTreeWinPos="left"
+let NERDTreeQuitOnOpen=1
 noremap <f2> :NERDTreeToggle<cr>
 
 " PyRef {{{2
@@ -418,7 +419,8 @@ nnoremap <leader>o :Voom
 
 " Tagbar设置
 nnoremap <silent> <F12> :TagbarToggle<CR>
-let g:tagbar_width = 30
+
+nnoremap <silent> <F3> :!python % <CR>
 
 " css color 设置
 "let g:cssColorVimDoNotMessMyUpdatetime = 1
