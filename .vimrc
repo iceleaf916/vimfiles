@@ -126,7 +126,7 @@ endtry
 " 不同界面特别设置
 if has("gui_running")              " 使用GUI时
     set guioptions-=T              " 关闭工具栏
-    set guioptions-=m              " 关闭菜单栏
+    "set guioptions-=m              " 关闭菜单栏
     set guioptions-=t              " 菜单不可撕下
     set guioptions-=e              " 非GUI标签栏
     set winaltkeys=no              " Alt键不映射到菜单上
@@ -151,7 +151,7 @@ endif
 "color murphy " 颜色主题
 "color torte
 set cursorline
-highlight CursorLine cterm=NONE ctermbg=darkgray ctermfg=white
+highlight CursorLine cterm=NONE ctermbg=darkgray
 
 " 键位映射 {{{1
 " ========
@@ -179,10 +179,10 @@ nnoremap <leader>tr :tabprevious<cr>
 
 " 窗口操作 {{{2
 " ----
-map <s-F12> :split<CR>  		"横向分割窗口
-map <c-F12> :vsplit<CR>		"坚向侵害窗口
-map <s-F10> :close<CR>   "关闭当前窗口
-map <c-F10> :only<CR>    "只留当前窗口
+"map <s-F12> :split<CR>  		"横向分割窗口
+"map <c-F12> :vsplit<CR>		"坚向侵害窗口
+"map <s-F10> :close<CR>   "关闭当前窗口
+"map <c-F10> :only<CR>    "只留当前窗口
 
 " 高亮 {{{2
 " ----
