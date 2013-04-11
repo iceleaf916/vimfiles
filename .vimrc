@@ -32,7 +32,7 @@ endif
 " 使用 pathogen 插件
 try
     runtime bundle/pathogen.git/autoload/pathogen.vim
-    call pathogen#incubate()
+    call pathogen#infect()
 catch
 endtry
 
