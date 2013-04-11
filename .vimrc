@@ -32,7 +32,7 @@ endif
 " 使用 pathogen 插件
 try
     runtime bundle/pathogen.git/autoload/pathogen.vim
-    call pathogen#runtime_append_all_bundles()
+    call pathogen#incubate()
 catch
 endtry
 
@@ -421,6 +421,14 @@ nnoremap <leader>o :Voom
 nnoremap <silent> <F12> :TagbarToggle<CR>
 
 nnoremap <silent> <F3> :!python % <CR>
+
+"syntastic 语法检查设置
+let g:syntastic_check_on_open=1
+let g:syntastic_quiet_warning=0
+let g:syntastic_enable_signs=1
+let g:syntastic_enable_highlighting=0
+let g:syntastic_python_checker_args='--ignore=E501,E302,E231,E261,E201,W402,W293,W291,E225,E203,E226'
+nmap cs :SyntasticCheck<CR>
 
 " css color 设置
 "let g:cssColorVimDoNotMessMyUpdatetime = 1

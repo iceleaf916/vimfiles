@@ -52,10 +52,10 @@ voom:
     home: http://www.vim.org/scripts/script.php?script_id=2657
     repo: https://github.com/vim-scripts/VOoM.git
 
-#pyflakes:
-#    desc: python 语法检查
-#    home: http://www.vim.org/scripts/script.php?script_id=2441
-#    repo: https://github.com/kevinw/pyflakes-vim.git
+pyflakes:
+    desc: python 语法检查
+    home: http://www.vim.org/scripts/script.php?script_id=2441
+    repo: https://github.com/kevinw/pyflakes-vim.git
 
 #dosini:
 #    desc: ini 语法高亮
@@ -121,3 +121,10 @@ CssColor:
     home: https://github.com/skammer/vim-css-color.git
     repo: https://github.com/skammer/vim-css-color.git
     type: git
+
+syntastic:
+    desc: syntastic
+    home: https://github.com/scrooloose/syntastic
+    repo: https://github.com/scrooloose/syntastic.git
+    type: git
+
