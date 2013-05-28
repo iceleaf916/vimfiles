@@ -128,3 +128,8 @@ syntastic:
     repo: https://github.com/scrooloose/syntastic.git
     type: git
 
+coffee-script:
+    desc: coffee-script
+    home: https://github.com/kchmck/vim-coffee-script.git
+    repo: https://github.com/kchmck/vim-coffee-script.git
+    type: git
