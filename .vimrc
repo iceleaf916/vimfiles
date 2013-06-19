@@ -438,11 +438,11 @@ nmap cs :SyntasticCheck<CR>
 
 " 复制到系统剪贴板
 "vnoremap <leader>y <esc>"+y
-"vnoremap <leader>Y <esc>"+Y
+vnoremap <leader>y "+y
 
 " 插入系统剪贴板内容
 "nnoremap <leader>p <esc>"+p
-"nnoremap <leader>P <esc>"+P
+nnoremap <leader>P <esc>"+P
 
 " 主窗口大小变化时，vim里的分割窗口也自动调整
 "autocmd VimResized * exe "normal! \<c-w>="
