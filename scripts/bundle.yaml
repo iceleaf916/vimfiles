@@ -78,6 +78,12 @@ pyref:
     home: http://www.vim.org/scripts/script.php?script_id=3104
     repo: https://github.com/xolox/vim-pyref.git
 
+vim-misc:
+    desc: vim misc
+    home: https://github.com/xolox/vim-misc.git
+    repo: https://github.com/xolox/vim-misc.git
+    type: git
+
 matchtag:
     desc: html 当前对应签高亮
     home: http://www.vim.org/scripts/script.php?script_id=3818
@@ -116,11 +122,11 @@ TagBar:
     repo: https://github.com/majutsushi/tagbar.git
     type: git
 
-CssColor:
-    desc: CssColor
-    home: https://github.com/skammer/vim-css-color.git
-    repo: https://github.com/skammer/vim-css-color.git
-    type: git
+#CssColor:
+#    desc: CssColor
+#    home: https://github.com/skammer/vim-css-color.git
+#    repo: https://github.com/skammer/vim-css-color.git
+#    type: git
 
 syntastic:
     desc: syntastic
@@ -132,4 +138,16 @@ coffee-script:
     desc: coffee-script
     home: https://github.com/kchmck/vim-coffee-script.git
     repo: https://github.com/kchmck/vim-coffee-script.git
+    type: git
+
+vim-qml:
+    desc: VimQml
+    home: https://github.com/peterhoeg/vim-qml.git
+    repo: https://github.com/peterhoeg/vim-qml.git
+    type: git
+
+go-vim:
+    desc: go-vim
+    home: https://github.com/jnwhiteh/vim-golang.git
+    repo: https://github.com/jnwhiteh/vim-golang.git
     type: git

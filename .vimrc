@@ -216,6 +216,10 @@ nnoremap <leader>fi :set foldmethod=indent<cr>
 " 将自动折叠等级设置为1
 nnoremap <leader>fl :set foldlevel=1<cr>
 
+" " 用空格键来开关折叠
+set foldmethod=indent
+nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
+
 " 移动 {{{2
 " ----
 
@@ -421,6 +425,7 @@ nnoremap <leader>o :Voom
 nnoremap <silent> <F12> :TagbarToggle<CR>
 
 nnoremap <silent> <F3> :!python % <CR>
+nnoremap <silent> <F4> :!qmlscene % <CR>
 
 "syntastic 语法检查设置
 let g:syntastic_check_on_open=1
