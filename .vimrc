@@ -130,8 +130,10 @@ if has("gui_running")              " 使用GUI时
     set guioptions-=t              " 菜单不可撕下
     set guioptions-=e              " 非GUI标签栏
     set winaltkeys=no              " Alt键不映射到菜单上
-    set columns=116                " 设置窗口列数
-    set lines=28                   " 设置窗口行数
+    set columns=120                " 设置窗口列数
+    set lines=26                   " 设置窗口行数
+    set guifont=Yahei\ Mono\ 10
+    set autochdir
 else                               " 使用CLI时
     if &term == "xterm"            " 虚拟终端
         set t_Co=256               " 终端颜色数
@@ -186,6 +188,7 @@ nnoremap <leader>tr :tabprevious<cr>
 
 " 高亮 {{{2
 " ----
+set colorcolumn=81
 
 " 高亮第 81 列
 nnoremap <leader>m :set colorcolumn=81<cr>
@@ -418,14 +421,21 @@ let g:pyref_mapping = '<leader>k'
 " Voom {{{2
 " ----
 
-nnoremap <leader>O :Voom<cr>
-nnoremap <leader>o :Voom 
+"nnoremap <leader>O :Voom<cr>
+"nnoremap <leader>o :Voom
+
+nnoremap <leader>o <c-w>gf<cr>
 
 " Tagbar设置
 nnoremap <silent> <F12> :TagbarToggle<CR>
 
 nnoremap <silent> <F3> :!python % <CR>
 nnoremap <silent> <F4> :!qmlscene % <CR>
+nnoremap <silent> <F5> gd<CR>
+nnoremap <silent> <F8> :%s/\s\+$//g<CR>
+
+" for vim-godef
+let g:godef_split=2
 
 "syntastic 语法检查设置
 let g:syntastic_check_on_open=1
@@ -457,3 +467,36 @@ nnoremap <leader>P <esc>"+P
 
 " 驼峰转下划线分隔
 "nmap <leader>u viw:s/\<\@!\([A-Z]\)/\_\l\1/g<cr>gul:nohl<cr>
+
+let g:tagbar_type_go = {
+    \ 'ctagstype' : 'go',
+    \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+    \ },
+    \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+    \ },
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+\ }
+
+
+autocmd BufNewFile *.py 0r ~/.vim/template/pythonconfig.py
+autocmd BufNewFile *.qml 0r ~/.vim/template/qmlconfig.qml
+autocmd BufWritePre,FileAppendPre,FileWritePre,FilterWritePre *.qml: silent <F8>

@@ -146,8 +146,21 @@ vim-qml:
     repo: https://github.com/peterhoeg/vim-qml.git
     type: git
 
-go-vim:
-    desc: go-vim
-    home: https://github.com/jnwhiteh/vim-golang.git
-    repo: https://github.com/jnwhiteh/vim-golang.git
+vim-godef:
+    desc: vim-godef
+    home: https://github.com/dgryski/vim-godef
+    repo: https://github.com/dgryski/vim-godef
     type: git
+
+vim-gocode:
+    desc: vim-gocode
+    home: https://github.com/Blackrush/vim-gocode
+    repo: https://github.com/Blackrush/vim-gocode
+    type: git
+
+vim-vary:
+    desc: vary-vim
+    home: https://github.com/dongweiming/vary.vim
+    repo: https://github.com/dongweiming/vary.vim
+    type: git
+
