@@ -30,14 +30,33 @@ endif
 " ----------
 
 " 使用 pathogen 插件
-try
-    runtime bundle/pathogen.git/autoload/pathogen.vim
-    call pathogen#infect()
-catch
-endtry
+"try
+"    runtime bundle/pathogen.git/autoload/pathogen.vim
+"    call pathogen#infect()
+"catch
+"endtry
+
+filetype off
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'fatih/vim-go'
+Bundle 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/syntastic'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'groenewege/vim-less'
+Plugin 'Raimondi/delimitMate'
+Plugin 'pangloss/vim-javascript'
+Plugin 'nathanaelkane/vim-indent-guides'
+
+call vundle#end()            " required
 
 " 选项 {{{1
 " ====
+let javascript_enable_domhtmlcss = 1
 
 " 常规 {{{2
 " ----
@@ -500,3 +519,10 @@ let g:tagbar_type_go = {
 autocmd BufNewFile *.py 0r ~/.vim/template/pythonconfig.py
 autocmd BufNewFile *.qml 0r ~/.vim/template/qmlconfig.qml
 autocmd BufWritePre,FileAppendPre,FileWritePre,FilterWritePre *.qml: silent <F8>
+
+
+" html and css
+let g:ycm_semantic_triggers = {
+    \   'css': [ 're!^\s{4}', 're!:\s+'],
+    \   'html': [ '</' ],
+    \ }
